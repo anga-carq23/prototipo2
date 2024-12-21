@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylo's</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            overflow-x: hidden;
+        }
+        header {
+            display: none; /* Eliminamos la barra superior */
+        }
+        .menu-lateral {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 100%;
+            background-color: #3a506b; /* Azul mate */
+            color: white;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+        }
+        .menu-lateral h2 {
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .menu-lateral ul {
+            list-style: none;
+            padding: 0;
+        }
+        .menu-lateral ul li {
+            margin: 15px 0;
+        }
+        .menu-lateral ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+            display: block;
+        }
+        .menu-lateral ul li ul {
+            margin-top: 10px;
+            margin-left: 15px;
+        }
+        .menu-lateral ul li ul li a {
+            font-size: 0.9rem;
+        }
+        .banner {
+            background-color: black;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+        .banner video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            z-index: 1;
+        }
+        .banner h1 {
+            font-size: 3rem;
+            font-family: "Brush Script MT", cursive;
+            color: white;
+            position: relative;
+            z-index: 2;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+        .carrusel {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            margin-top: 20px;
+        }
+        .carrusel img {
+            width: 100%;
+            display: block;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carrusel .contenido {
+            display: flex;
+            animation: carrusel 10s infinite;
+        }
+        @keyframes carrusel {
+            0% { transform: translateX(0); }
+            33% { transform: translateX(-100%); }
+            66% { transform: translateX(-200%); }
+            100% { transform: translateX(0); }
+        }
+        footer {
+            background-color: #3a506b;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-lateral">
+        <h2>Stylo's</h2>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li>
+                <a href="#">Estética</a>
+                <ul>
+                    <li><a href="#">Cortes de Cabello</a></li>
+                    <li><a href="#">Efectos de Color</a></li>
+                    <li><a href="#">Peinados</a></li>
+                    <li><a href="#">Ondulaciones</a></li>
+                    <li><a href="#">Depilaciones</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Manicure</a>
+                <ul>
+                    <li><a href="#">Manicure</a></li>
+                    <li><a href="#">Pedicure</a></li>
+                    <li><a href="#">Pestañas</a></li>
+                    <li><a href="#">Uñas Gelish</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Reparación</a>
+                <ul>
+                    <li><a href="#">Reparación de Teléfonos</a></li>
+                    <li><a href="#">Desbloqueo</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Nieves</a>
+                <ul>
+                    <li><a href="#">Sabores del Día</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="banner">
+        <video autoplay muted loop>
+            <source src="ruta/de/tu/video.mp4" type="video/mp4">
+            Tu navegador no soporta la reproducción de videos.
+        </video>
+        <h1>Bienvenido a Stylo's</h1>
+    </div>
+
+    <div class="carrusel">
+        <div class="contenido">
+            <img src="https://via.placeholder.com/1200x400?text=Servicio+1" alt="Servicio 1">
+            <img src="https://via.placeholder.com/1200x400?text=Servicio+2" alt="Servicio 2">
+            <img src="https://via.placeholder.com/1200x400?text=Servicio+3" alt="Servicio 3">
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Stylo's. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
